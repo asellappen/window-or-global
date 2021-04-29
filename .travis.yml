@@ -1,0 +1,27 @@
+# ----------------------------------------------------------------------------
+#
+# Package             : window-or-global
+# Source Repo         : https://github.com/purposeindustries/window-or-global
+# Travis Job Link     : https://travis-ci.com/github/asellappen/window-or-global/
+# Created travis.yml  : No
+# Maintainer          : Arumugam N S <asellappen@yahoo.com> / Priya Seth<sethp@us.ibm.com>
+#
+# Script License      : Apache License, Version 2 or later
+#
+# ----------------------------------------------------------------------------
+language: java
+
+arch:
+    - amd64
+    - ppc64le
+
+dist: bionic
+
+jdk:
+  - openjdk8
+  - openjdk11
+install:
+ - sudo apt-get install nodejs
+ - npm install
+script :
+ - npm run test
